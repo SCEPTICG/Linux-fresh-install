@@ -15,7 +15,7 @@ Cosas que hace el script:
 ### Instalación
 ```
 git clone https://github.com/SCEPTICG/Linux-fresh-install
-cd Ubuntu-fresh-install
+cd Linux-fresh-install
 chmod +x conf.sh
 ./conf.sh
 chmod +x sudoconf.sh
