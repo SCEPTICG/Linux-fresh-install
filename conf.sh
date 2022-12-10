@@ -1,9 +1,9 @@
 #!/bin/bash
 
-./instalacion.sh
+. instalacion.sh
 
 options=(Ubuntu "Debian based distribution" Fedora "Arch linux")
 echo "Please choose an option:"
 printf "%s\n" "${options[@]}" | fzy
 
-printf(options)
+printf options
