@@ -2,6 +2,8 @@
 
 ./instalacion.sh
 
-options=(opt1 "option 2" another "option here")
+options=(Ubuntu "Debian based distribution" Fedora "Arch linux")
 echo "Please choose an option:"
 printf "%s\n" "${options[@]}" | fzy
+
+printf(options)
