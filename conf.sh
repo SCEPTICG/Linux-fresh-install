@@ -2,23 +2,24 @@
 
 . instalacion.sh
 
-options=(Ubuntu "Debian based distribution" Fedora "Arch or Arch based distrobution")
-echo "Please choose an option:"
-printf "%s\n" "${options[@]}" | fzy
+sudo apt install fzy
 
-PS3='Please enter your choice: '
-options=("Option 1" "Option 2" "Option 3" "Quit")
-select opt in "${options[@]}"
+options=(Ubuntu "Debian based distribution" Fedora "Arch or Arch based distrobution" Quit)
+echo "Please choose an option:"
+select opt in "%s\n" "${options[@]}" | fzy
 do
     case $opt in
-        "Option 1")
-            echo "you chose choice 1"
+        "Ubuntu")
+            echo "you chose Ubuntu"
             ;;
-        "Option 2")
-            echo "you chose choice 2"
+        "Debian based distribution")
+            echo "you chose Debian based distribution"
             ;;
-        "Option 3")
-            echo "you chose choice $REPLY which is $opt"
+        "Fedora")
+            echo "you chose Fedora"
+            ;;
+        "Arch or Arch based distrobution")
+            echo "you chose Arch or Arch based distrobution"
             ;;
         "Quit")
             break
@@ -26,3 +27,4 @@ do
         *) echo "invalid option $REPLY";;
     esac
 done
+
