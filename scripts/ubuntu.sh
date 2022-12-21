@@ -101,8 +101,7 @@ sleep 2
 #INSTALAMOS ZSH Y CONFIGURAMOS POWERLEVEL10K
 sudo apt install zsh -y
 chsh -s $(which zsh)
-directorio=$pwd
-cp $directorio/zshrc ~/.zshrc
+cp config/zshrc ~/.zshrc
 sudo apt install zsh-syntax-highlighting zsh-autosuggestions locate bat -y
 sudo updatedb
 sudo mkdir /usr/share/zsh-sudo
@@ -116,7 +115,7 @@ rm lsd-musl_0.23.1_amd64.deb
 ln -s /usr/bin/batcat ~/.local/bin/bat
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-cp $directorio/p10k.zsh ~/.p10k.zsh
+cp config/p10k.zsh ~/.p10k.zsh
 
 
 echo "====================================================="
