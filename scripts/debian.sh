@@ -34,6 +34,10 @@ sleep 2
 sudo apt install software-properties-common apt-transport-https wget -y
 wget -O- https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/vscode.gpg
 echo deb [arch=amd64 signed-by=/usr/share/keyrings/vscode.gpg] https://packages.microsoft.com/repos/vscode stable main | sudo tee /etc/apt/sources.list.d/vscode.list
+#Virtualbox
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bullseye contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
 
 echo "====================================================="
 echo "                 Installing packages                 "
@@ -42,7 +46,7 @@ echo ""
 sleep 2
 #INSTALAMOS TODOS LOS PAQUETES
 sudo apt update
-sudo apt install firefox code nala virtualbox git kitty neofetch ubuntu-restricted-extras -y
+sudo apt install firefox-esr code nala virtualbox git kitty neofetch -y
 wget https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb
 sudo dpkg -i nvim-linux64.deb
 rm nvim-linux64.deb
