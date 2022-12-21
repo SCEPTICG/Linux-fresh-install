@@ -29,9 +29,7 @@ do
             break
             ;;
         "Debian or Debian based distribution")
-            sh ./scripts/debian.sh
-            sudo sh ./scripts/sudoudebian.sh
-            break
+            echo "you chose Debian or Debian based distribution"
             ;;
         "Fedora")
             echo "you chose Fedora"
