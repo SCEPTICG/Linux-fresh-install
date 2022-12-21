@@ -62,7 +62,7 @@ nvim +PackerSync
 #INSTALAMOS ZSH Y CONFIGURAMOS POWERLEVEL10K
 sudo apt install zsh -y
 chsh -s $(which zsh)
-cp zshrc ~/.zshrc
+cp ../config/zshrc ~/.zshrc
 sudo apt install zsh-syntax-highlighting zsh-autosuggestions locate bat -y
 sudo updatedb
 sudo mkdir /usr/share/zsh-sudo
