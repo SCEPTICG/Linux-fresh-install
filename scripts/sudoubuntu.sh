@@ -21,6 +21,16 @@ echo "==========================================================================
 echo ""
 
 echo "====================================================="
+echo "                 Installing Astrovim                 "
+echo "====================================================="
+echo ""
+sleep 2
+#INSTALAMOS ASTROVIM PARA ROOT
+mv ~/.local/share/nvim/site ~/.local/share/nvim/site.bak
+git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+nvim +PackerSync
+
+echo "====================================================="
 echo "  Installing and configuring ZSH with powerlevel10k  "
 echo "====================================================="
 echo ""
@@ -32,11 +42,11 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 cp p10k.zsh ~/.p10k.zsh
 
-#INSTALAMOS ASTROVIM PARA ROOT
-mv ~/.local/share/nvim/site ~/.local/share/nvim/site.bak
-git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-nvim +PackerSync
-
+echo "====================================================="
+echo "                   Installing FZF                    "
+echo "====================================================="
+echo ""
+sleep 2
 #INSTALAMOS FZF PARA ROOT
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
