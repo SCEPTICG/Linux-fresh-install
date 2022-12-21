@@ -16,8 +16,6 @@ Cosas que hace el script:
 ```
 git clone https://github.com/SCEPTICG/Linux-fresh-install
 cd Linux-fresh-install
-chmod +x conf.sh
-./conf.sh
-chmod +x sudoconf.sh
-sudo ./sudoconf.sh
+chmod +x install.sh
+./install.sh
 ```
