@@ -29,3 +29,27 @@ do
     esac
 done
 
+options=(opt1 "option 2" another "option here")
+echo "Please choose an option:"
+printf "%s\n" "${options[@]}" | fzy
+do
+    case $options in
+        "Ubuntu")
+            echo "you chose Ubuntu"
+            ;;
+        "Debian based distribution")
+            echo "you chose Debian based distribution"
+            ;;
+        "Fedora")
+            echo "you chose Fedora"
+            ;;
+        "Arch or Arch based distrobution")
+            echo "you chose Arch or Arch based distrobution"
+            ;;
+        "Quit")
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
+
