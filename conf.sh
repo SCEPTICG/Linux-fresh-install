@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. Ubuntu.sh
+. ubuntu.sh
 
 PS3='Please enter your choice: '
 options=(Ubuntu "Debian based distribution" Fedora "Arch or Arch based distrobution" Quit)
@@ -10,6 +10,7 @@ do
     case $opt in
         "Ubuntu")
             echo "you chose Ubuntu"
+            ubuntu.sh
             ;;
         "Debian based distribution")
             echo "you chose Debian based distribution"
