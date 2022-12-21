@@ -18,7 +18,7 @@ echo "╚═╝╚═╝░░╚══╝╚═════╝░░░░╚�
 echo "====================================================================================================="
 
 PS3='Please enter your choice: '
-options=(Ubuntu "Debian based distribution" Fedora "Arch or Arch based distrobution" Quit)
+options=(Ubuntu "Debian or Debian based distribution" Fedora "Arch or Arch based distrobution" Quit)
 echo "Please choose an option:"
 select opt in "${options[@]}"
 do
