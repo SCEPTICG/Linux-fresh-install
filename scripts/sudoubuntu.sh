@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# MIRAMOS QUE EL SCRIPT SE EJECUTA COMO ROOT
-if [[ $EUID -ne 0 ]]; then
-  echo "Tienes que ser root para ejecutar este script, porfavor ejecuta sudo sudoubuntu.sh" 2>&1
-  exit 1
-fi
-
 echo "========================================================================================="
 echo ""
 echo "░██████╗██╗░░░██╗██████╗░░█████╗░  ██╗░░░██╗██████╗░██╗░░░██╗███╗░░██╗████████╗██╗░░░██╗"
