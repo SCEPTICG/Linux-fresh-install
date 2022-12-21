@@ -24,13 +24,14 @@ select opt in "${options[@]}"
 do
     case $opt in
         "Ubuntu")
-            echo "you chose Ubuntu"
             sh ./scripts/ubuntu.sh
             sudo sh ./scripts/sudoubuntu.sh
             break
             ;;
         "Debian based distribution")
-            echo "you chose Debian based distribution"
+            sh ./scripts/debian.sh
+            sudo sh ./scripts/sudoudebian.sh
+            break
             ;;
         "Fedora")
             echo "you chose Fedora"
