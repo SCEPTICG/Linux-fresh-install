@@ -4,6 +4,7 @@
 
 sudo apt install fzy
 
+PS3='Please enter your choice: '
 options=(Ubuntu "Debian based distribution" Fedora "Arch or Arch based distrobution" Quit)
 echo "Please choose an option:"
 select opt in "${options[@]}"

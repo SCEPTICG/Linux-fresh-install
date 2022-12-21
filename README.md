@@ -1,4 +1,4 @@
-# Ubuntu-fresh-install
+# Linux-fresh-install
 Script para la configuración que hago nada más instalar ubuntu
 
 Cosas que hace el script:
