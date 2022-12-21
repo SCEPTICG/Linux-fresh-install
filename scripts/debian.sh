@@ -38,6 +38,9 @@ echo deb [arch=amd64 signed-by=/usr/share/keyrings/vscode.gpg] https://packages.
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
 echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bullseye contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+#Nala
+echo "deb-src https://deb.volian.org/volian/ scar main" | sudo tee -a /etc/apt/sources.list.d/volian-archive-scar-unstable.list
+
 
 echo "====================================================="
 echo "                 Installing packages                 "
@@ -46,7 +49,7 @@ echo ""
 sleep 2
 #INSTALAMOS TODOS LOS PAQUETES
 sudo apt update
-sudo apt install firefox-esr code nala virtualbox git kitty neofetch -y
+sudo apt install firefox-esr code nala virtualbox-7.0 git kitty neofetch -y
 wget https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb
 sudo dpkg -i nvim-linux64.deb
 rm nvim-linux64.deb
