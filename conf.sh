@@ -1,7 +1,5 @@
 #!/bin/bash
 
-. ubuntu.sh
-
 PS3='Please enter your choice: '
 options=(Ubuntu "Debian based distribution" Fedora "Arch or Arch based distrobution" Quit)
 echo "Please choose an option:"
