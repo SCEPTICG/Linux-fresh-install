@@ -26,7 +26,7 @@ do
         "Ubuntu")
             echo "you chose Ubuntu"
             sh .scripts/ubuntu.sh
-            sh .scripts/sudoubuntu.sh
+            sudo sh .scripts/sudoubuntu.sh
             break
             ;;
         "Debian based distribution")
