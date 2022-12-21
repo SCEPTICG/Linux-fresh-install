@@ -14,7 +14,6 @@ Cosas que hace el script:
 
 ### Instalación
 ```
-sudo apt install git
 git clone https://github.com/SCEPTICG/Linux-fresh-install
 cd Linux-fresh-install
 chmod +x install.sh
