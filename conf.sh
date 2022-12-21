@@ -29,10 +29,10 @@ do
     esac
 done
 
-options=(opt1 "option 2" another "option here")
-echo "Please choose an option:"
-printf "%s\n" "${options[@]}" | fzy
 do
+    options=(opt1 "option 2" another "option here")
+    echo "Please choose an option:"
+    printf "%s\n" "${options[@]}" | fzy
     case $options in
         "Ubuntu")
             echo "you chose Ubuntu"
