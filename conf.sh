@@ -6,7 +6,7 @@ sudo apt install fzy
 
 options=(Ubuntu "Debian based distribution" Fedora "Arch or Arch based distrobution" Quit)
 echo "Please choose an option:"
-select opt in "${options[@]}" | fzy
+select opt in "${options[@]}"
 do
     case $opt in
         "Ubuntu")
