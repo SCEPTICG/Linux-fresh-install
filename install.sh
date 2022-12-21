@@ -25,7 +25,9 @@ do
     case $opt in
         "Ubuntu")
             echo "you chose Ubuntu"
-            sh ./ubuntu.sh
+            sh .scripts/ubuntu.sh
+            sh .scripts/sudoubuntu.sh
+            break
             ;;
         "Debian based distribution")
             echo "you chose Debian based distribution"
