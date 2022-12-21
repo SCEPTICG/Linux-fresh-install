@@ -76,7 +76,7 @@ rm lsd-musl_0.23.1_amd64.deb
 ln -s /usr/bin/batcat ~/.local/bin/bat
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-cp p10k.zsh ~/.p10k.zsh
+cp ../config/p10k.zsh ~/.p10k.zsh
 
 #INSTALAMOS FZF
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
