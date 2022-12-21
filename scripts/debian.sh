@@ -38,9 +38,6 @@ echo deb [arch=amd64 signed-by=/usr/share/keyrings/vscode.gpg] https://packages.
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
 echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bullseye contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
-#Nala
-echo "deb-src https://deb.volian.org/volian/ scar main" | sudo tee -a /etc/apt/sources.list.d/volian-archive-scar-unstable.list
-
 
 echo "====================================================="
 echo "                 Installing packages                 "
@@ -56,7 +53,10 @@ rm nvim-linux64.deb
 wget https://github.com/shiftkey/desktop/releases/download/release-3.1.1-linux1/GitHubDesktop-linux-3.1.1-linux1.deb
 sudo dpkg -i GitHubDesktop-linux-3.1.1-linux1.deb
 rm GitHubDesktop-linux-3.1.1-linux1.deb
-
+wget https://gitlab.com/volian/volian-archive/uploads/b20bd8237a9b20f5a82f461ed0704ad4/volian-archive-keyring_0.1.0_all.deb
+https://gitlab.com/volian/volian-archive/uploads/d6b3a118de5384a0be2462905f7e4301/volian-archive-nala_0.1.0_all.deb
+sudo apt install ./volian-archive*.deb
+rm volian-archive*.deb
 
 echo "====================================================="
 echo "                Installing Nerd Fonts                "
