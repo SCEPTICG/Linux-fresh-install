@@ -28,7 +28,7 @@ do
             sudo sh ./scripts/sudoubuntu.sh
             break
             ;;
-        "Debian based distribution")
+        "Debian or Debian based distribution")
             sh ./scripts/debian.sh
             sudo sh ./scripts/sudoudebian.sh
             break
