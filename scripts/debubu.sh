@@ -65,8 +65,8 @@ wget https://github.com/shiftkey/desktop/releases/download/release-3.1.1-linux1/
 sudo dpkg -i GitHubDesktop-linux-3.1.1-linux1.deb
 rm GitHubDesktop-linux-3.1.1-linux1.deb
 wget https://deb.volian.org/volian/pool/main/n/nala-legacy/nala-legacy_0.11.0_amd64.deb
-sudo dpkg -i https://deb.volian.org/volian/pool/main/n/nala-legacy/nala-legacy_0.11.0_amd64.deb
-rm https://deb.volian.org/volian/pool/main/n/nala-legacy/nala-legacy_0.11.0_amd64.deb
+sudo dpkg -i nala-legacy_0.11.0_amd64.deb
+rm nala-legacy_0.11.0_amd64.deb
 
 
 echo "====================================================="
