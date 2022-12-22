@@ -58,15 +58,17 @@ sleep 2
 #INSTALAMOS TODOS LOS PAQUETES
 sudo apt update
 sudo apt install firefox-esr code virtualbox git kitty neofetch python3-tomli python3-typer python3-httpx apt-transport-https -y
+wget https://deb.volian.org/volian/pool/main/n/nala-legacy/nala-legacy_0.11.0_amd64.deb
+sudo dpkg -i nala-legacy_0.11.0_amd64.deb
+rm nala-legacy_0.11.0_amd64.deb
+sudo nala purge neovim
 wget https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb
 sudo dpkg -i nvim-linux64.deb
 rm nvim-linux64.deb
 wget https://github.com/shiftkey/desktop/releases/download/release-3.1.1-linux1/GitHubDesktop-linux-3.1.1-linux1.deb
 sudo dpkg -i GitHubDesktop-linux-3.1.1-linux1.deb
 rm GitHubDesktop-linux-3.1.1-linux1.deb
-wget https://deb.volian.org/volian/pool/main/n/nala-legacy/nala-legacy_0.11.0_amd64.deb
-sudo dpkg -i nala-legacy_0.11.0_amd64.deb
-rm nala-legacy_0.11.0_amd64.deb
+
 
 
 echo "====================================================="
