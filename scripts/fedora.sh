@@ -71,10 +71,19 @@ echo ""
 sleep 2
 
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc' > /etc/yum.repos.d/vscode.repo
-sudo rpm --import https://packagecloud.io/shiftkey/desktop/gpgkey
-sudo sh -c 'echo -e "[shiftkey]\nname=GitHub Desktop\nbaseurl=https://packagecloud.io/shiftkey/desktop/el/7/\$basearch\nenabled=1\ngpgcheck=0\nrepo_gpgcheck=1\ngpgkey=https://packagecloud.io/shiftkey/desktop/gpgkey' > /etc/yum.repos.d/shiftkey-desktop.repo
-sudo dnf install firefox code VirtualBox git kitty neovim github-desktop neofetch -y
+cat <<EOF | sudo tee /etc/yum.repos.d/vscode.repo
+[code]
+name=Visual Studio Code
+baseurl=https://packages.microsoft.com/yumrepos/vscode
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+EOF
+sudo dnf upgrade -y
+sudo dnf install firefox code VirtualBox git kitty neovim neofetch -y
+wget https://github.com/shiftkey/desktop/releases/download/release-3.1.1-linux1/GitHubDesktop-linux-3.1.1-linux1.rpm
+sudo rpm -i GitHubDesktop-linux-3.1.1-linux1.rpm
+rm GitHubDesktop-linux-3.1.1-linux1.rpm
 
 echo "================================================"
 echo "              Installing Nerd Fonts             "
