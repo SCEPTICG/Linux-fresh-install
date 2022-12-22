@@ -77,6 +77,17 @@ sudo sh -c 'echo -e "[shiftkey]\nname=GitHub Desktop\nbaseurl=https://packageclo
 sudo dnf install firefox code VirtualBox git kitty neovim github-desktop neofetch -y
 
 echo"================================================"
+echo"              Installing Nerd Fonts             "
+echo"================================================"
+echo""
+sleep 2
+git clone https://github.com/ryanoasis/nerd-fonts.git
+cd nerd-fonts
+./install.sh
+cd ..
+rm -rf nerd-fonts
+
+echo"================================================"
 echo"               Installing Astrovim              "
 echo"================================================"
 echo""
