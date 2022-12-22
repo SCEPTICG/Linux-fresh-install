@@ -86,3 +86,36 @@ mv ~/.local/share/nvim/site ~/.local/share/nvim/site.bak
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 nvim +PackerSync
 
+echo"================================================"
+echo"Installing and configuring ZSH with powerlevel10k"
+echo"================================================"
+echo""
+sleep 2
+
+sudo dnf install zsh -y
+hsh -s $(which zsh)
+cp config/zshrc ~/.zshrc
+sudo dnf install zsh-syntax-highlighting zsh-autosuggestions locate bat -y
+sudo updatedb
+sudo mkdir /usr/share/zsh-sudo
+sudo chown scepticg:scepticg /usr/share/zsh-sudo
+wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
+sudo mv sudo.plugin.zsh /usr/share/zsh-sudo
+wget https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd-musl_0.23.1_amd64.deb
+sudo dpkg -i lsd-musl_0.23.1_amd64.deb
+mkdir -p ~/.local/bin
+rm lsd-musl_0.23.1_amd64.deb
+ln -s /usr/bin/batcat ~/.local/bin/bat
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+cp config/p10k.zsh ~/.p10k.zsh
+
+echo"================================================"
+echo"                 Installing FZF                 "
+echo"================================================"
+echo""
+sleep 2
+
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+exit
