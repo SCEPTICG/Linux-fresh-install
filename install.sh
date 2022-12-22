@@ -18,7 +18,7 @@ echo "╚═╝╚═╝░░╚══╝╚═════╝░░░░╚�
 echo "====================================================================================================="
 
 PS3='Please enter your choice: '
-options=("Ubuntu" "Debian" "Debian or Ubuntu based distribution" "Fedora" "Arch or Arch based distrobution" "Quit")
+options=("Ubuntu" "Debian" "Debian based distribution" "Fedora" "Arch or Arch based distrobution" "Quit")
 echo "Please choose an option:"
 select opt in "${options[@]}"
 do
@@ -33,7 +33,12 @@ do
             sudo sh ./scripts/sudodebian.sh
             break
             ;;
-        "Debian or Ubuntu based distribution")
+        "Debian based distribution")
+            sh ./scripts/debdist.sh
+            sudo sh ./scripts/sudodebdist.sh
+            break
+            ;;
+        "Ubuntu based distribution")
             sh ./scripts/debubu.sh
             sudo sh ./scripts/sudodebubu.sh
             break
