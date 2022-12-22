@@ -45,9 +45,10 @@ echo ""
 sleep 2
 #AÑADIMOS LOS PPA QUE NECESTIAMOS
 #Vscode
-sudo apt install software-properties-common apt-transport-https wget -y
-wget -O- https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/vscode.gpg
-echo deb [arch=amd64 signed-by=/usr/share/keyrings/vscode.gpg] https://packages.microsoft.com/repos/vscode stable main | sudo tee /etc/apt/sources.list.d/vscode.list
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/microsoft-archive-keyring.gpg
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/usr/share/keyrings/microsoft-archive-keyring.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+
 
 echo "====================================================="
 echo "                 Installing packages                 "
@@ -56,13 +57,16 @@ echo ""
 sleep 2
 #INSTALAMOS TODOS LOS PAQUETES
 sudo apt update
-sudo apt install firefox-esr code nala virtualbox git kitty neofetch -y
+sudo apt install firefox-esr code virtualbox git kitty neofetch python3-tomli python3-typer python3-httpx apt-transport-https -y
 wget https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb
 sudo dpkg -i nvim-linux64.deb
 rm nvim-linux64.deb
 wget https://github.com/shiftkey/desktop/releases/download/release-3.1.1-linux1/GitHubDesktop-linux-3.1.1-linux1.deb
 sudo dpkg -i GitHubDesktop-linux-3.1.1-linux1.deb
 rm GitHubDesktop-linux-3.1.1-linux1.deb
+wget https://deb.volian.org/volian/pool/main/n/nala-legacy/nala-legacy_0.11.0_amd64.deb
+sudo dpkg -i https://deb.volian.org/volian/pool/main/n/nala-legacy/nala-legacy_0.11.0_amd64.deb
+rm https://deb.volian.org/volian/pool/main/n/nala-legacy/nala-legacy_0.11.0_amd64.deb
 
 
 echo "====================================================="
