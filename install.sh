@@ -34,8 +34,8 @@ do
             break
             ;;
         "Debian or Ubuntu based distribution")
-            sh ./scripts/debian.sh
-            sudo sh ./scripts/sudodebian.sh
+            sh ./scripts/debubu.sh
+            sudo sh ./scripts/sudodebubu.sh
             break
             ;;
         "Fedora")
