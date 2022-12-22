@@ -47,4 +47,20 @@ echo"             Install media codecs               "
 echo"================================================"
 sleep 2
 
+sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
+sudo dnf groupupdate sound-and-video -y
+sudo dnf install intel-media-driver -y
+sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld -y
+sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld -y
+sudo dnf swap mesa-va-drivers.i686 mesa-va-drivers-freeworld.i686 -y
+sudo dnf swap mesa-vdpau-drivers.i686 mesa-vdpau-drivers-freeworld.i686 -y
+sudo dnf install rpmfusion-free-release-tainted -y
+sudo dnf install libdvdcss -y
+
+echo"================================================"
+echo"      Enable maximize and minimize button       "
+echo"================================================"
+sleep 2
+
+gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
 
