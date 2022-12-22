@@ -61,7 +61,7 @@ sudo apt install firefox-esr code virtualbox git kitty neofetch python3-tomli py
 wget https://deb.volian.org/volian/pool/main/n/nala-legacy/nala-legacy_0.11.0_amd64.deb
 sudo dpkg -i nala-legacy_0.11.0_amd64.deb
 rm nala-legacy_0.11.0_amd64.deb
-sudo nala purge neovim
+sudo nala purge neovim -y
 wget https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb
 sudo dpkg -i nvim-linux64.deb
 rm nvim-linux64.deb
