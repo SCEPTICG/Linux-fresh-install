@@ -29,8 +29,7 @@ echo "  Installing and configuring OhMyBash  "
 echo "====================================================="
 echo ""
 sleep 2
-bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"
-cp config/p10k.zsh ~/.p10k.zsh
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
 echo "====================================================="
 echo "                   Installing FZF                    "
