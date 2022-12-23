@@ -31,6 +31,7 @@ echo ""
 sleep 2
 #AÑADIMOS LOS PPA QUE NECESTIAMOS
 #Vscode
+sudo apt install curl
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/microsoft-archive-keyring.gpg
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/usr/share/keyrings/microsoft-archive-keyring.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
@@ -43,10 +44,7 @@ echo ""
 sleep 2
 #INSTALAMOS TODOS LOS PAQUETES
 sudo apt update
-sudo apt install firefox-esr code virtualbox git kitty neofetch python3-tomli python3-typer python3-httpx apt-transport-https -y
-wget https://deb.volian.org/volian/pool/main/n/nala-legacy/nala-legacy_0.11.0_amd64.deb
-sudo dpkg -i nala-legacy_0.11.0_amd64.deb
-rm nala-legacy_0.11.0_amd64.deb
+sudo apt install firefox-esr code virtualbox git nala kitty neofetch python3-tomli -y
 wget https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb
 sudo dpkg -i nvim-linux64.deb
 rm nvim-linux64.deb
