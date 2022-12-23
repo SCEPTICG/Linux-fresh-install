@@ -25,15 +25,11 @@ git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 nvim +PackerSync
 
 echo "====================================================="
-echo "  Installing and configuring ZSH with powerlevel10k  "
+echo "  Installing and configuring OhMyBash  "
 echo "====================================================="
 echo ""
 sleep 2
-#HACEMOS UN LINK SYMBOLICO DE LA CONFIGURACIÓN DE ZSHRC Y CAMBIAMOS LA SHELL PARA ROOT
-ln -s -f ~/.zshrc /root/.zshrc
-chsh -s $(which zsh)
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"
 cp config/p10k.zsh ~/.p10k.zsh
 
 echo "====================================================="
