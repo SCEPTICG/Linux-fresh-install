@@ -30,6 +30,8 @@ echo "====================================================="
 echo ""
 sleep 2
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+cp config/bashrc ~/.bashrc
+
 
 echo "====================================================="
 echo "                   Installing FZF                    "
