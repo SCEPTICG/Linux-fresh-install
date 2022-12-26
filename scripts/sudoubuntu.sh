@@ -30,7 +30,7 @@ echo "====================================================="
 echo ""
 sleep 2
 #HACEMOS UN LINK SYMBOLICO DE LA CONFIGURACIÓN DE ZSHRC Y CAMBIAMOS LA SHELL PARA ROOT
-ln -s -f /home/scepticg/.zshrc /root/.zshrc
+ln -s -f $HOME/.zshrc /root/.zshrc
 chsh -s $(which zsh)
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
