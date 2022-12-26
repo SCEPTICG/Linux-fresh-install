@@ -61,7 +61,7 @@ echo ""
 sleep 2
 #INSTALAMOS TODOS LOS PAQUETES
 sudo apt update
-sudo apt install firefox code nala virtualbox git kitty neofetch ubuntu-restricted-extras -y
+sudo apt install firefox code nala virtualbox git kitty neofetch ubuntu-restricted-extras -y --allow-downgrades
 wget https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb
 sudo dpkg -i nvim-linux64.deb
 rm nvim-linux64.deb
