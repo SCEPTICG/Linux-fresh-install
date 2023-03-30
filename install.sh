@@ -30,7 +30,7 @@ do
             ;;
         "Debian")
             sh ./scripts/debian.sh
-            sudo sh ./scripts/sudodebian.sh
+            sudo sh ./scripts/sudodebian.shi
             break
             ;;
         "Debian based distribution")
