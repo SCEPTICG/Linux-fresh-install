@@ -14,6 +14,6 @@ match option:
     case 'Just Update':
         os.system('sudo apt update')
     case 'Do nothing':
-        pass
+        quit
 
 os.system('python3 ./browsers/browsers.py')
