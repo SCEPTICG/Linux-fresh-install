@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from pick import pick
 
 title = 'Choose an option: '
