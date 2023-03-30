@@ -1,5 +1,5 @@
 # Linux-fresh-install
-Script para la configuración que hago nada más instalar ubuntu
+This script is used to make a whole series of configurations to leave the OS the way I like it. If you like the configuration I do, feel free to use it and adapt it to your needs.
 
 Cosas que hace el script:
 - Instala Firefox como .deb
