@@ -16,4 +16,4 @@ match option:
     case 'Do nothing':
         quit
 
-os.system('python3 .scripts/ubuntu/browsers/browsers.py')
+os.system('python3 ./scripts/ubuntu/browsers/browsers.py')
