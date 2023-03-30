@@ -11,7 +11,7 @@ option, index = pick(options, title, indicator='=>', default_index=0)
 match option:
     case 'Google Chrome':
         os.system('wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmour -o /usr/share/keyrings/google_linux_signing_key.gpg')
-        os.system('sudo sh -c echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list')
+        os.system('sudo sh -c \'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google_linux_signing_key.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list\'')
         os.system('sudo apt update')
         os.system('sudo apt install google-chrome-stable -y')
     case 'Microsoft Edge':
@@ -41,8 +41,12 @@ match option:
     case 'Install .deb Firefox':
         os.system('sudo snap remove firefox')
         os.system('sudo add-apt-repository ppa:mozillateam/ppa')
-        os.system('echo "\nPackage: *\nPin: release o=LP-PPA-mozillateam\nPin-Priority: 1001\n" | sudo tee /etc/apt/preferences.d/mozilla-firefox')
-        os.system('echo "Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";" | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox')
-        os.system('sudo apt install firefox -y')
+        os.system('sudo touch /etc/apt/preferences.d/mozillateamppa')
+        os.system('sudo echo "Package: firefox*" > /etc/apt/preferences.d/mozillateamppa')
+        os.system('sudo echo "Pin: release o=LP-PPA-mozillateam" > /etc/apt/preferences.d/mozillateamppa')
+        os.system('sudo echo "Pin-Priority: 1001" > /etc/apt/preferences.d/mozillateamppa')
+        os.system('sudo echo "Pin-Priority: 1001" > /etc/apt/preferences.d/mozillateamppa')
+        os.system('echo \'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";\' | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox')
+        os.system('sudo apt install firefox')
     case 'Don\'t install a browser':
         exit
