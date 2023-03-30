@@ -10,7 +10,7 @@ option, index = pick(options, title, indicator='=>', default_index=0)
 
 match option:
     case "Ubuntu":
-         os.system('python3 /scripts/ubuntu/ubuntu.py')
+         os.system('python3 ./scripts/ubuntu/ubuntu.py')
          
     case "Ubuntu based distribution":
           print ("opcion 2")
