@@ -9,17 +9,17 @@ options = ['Ubuntu', 'Ubuntu based distribution', 'Debian', 'Debian based distri
 option, index = pick(options, title, indicator='=>', default_index=0)
 
 match option:
-    case "Ubuntu":
+    case 'Ubuntu':
          os.system('python3 ./scripts/ubuntu/ubuntu.py')
-    case "Ubuntu based distribution":
+    case 'Ubuntu based distribution':
           print ("opcion 2")
-    case "Debian":
+    case 'Debian':
           print ("Debian")
-    case "Debian based distribution":
+    case 'Debian based distribution':
          print ("Debian based distribution")
-    case "Fedora":
+    case 'Fedora':
          print ("Fedora")
-    case "Arch linux":
+    case 'Arch linux':
          print ("Arch linux")
-    case "Exit":
+    case 'Exit':
         exit
