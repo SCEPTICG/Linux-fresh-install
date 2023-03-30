@@ -11,7 +11,7 @@ option, index = pick(options, title, indicator='=>', default_index=0)
 
 match option:
     case "Ubuntu":
-         subprocess.call('sh', './scripts/ubuntu/ubuntu.sh')
+         subprocess.call(['sh', './scripts/ubuntu/ubuntu.sh'])
     case "Ubuntu based distribution":
           print ("opcion 2")
     case "Debian":
