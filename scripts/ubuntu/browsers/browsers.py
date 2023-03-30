@@ -9,7 +9,7 @@ option, index = pick(options, title, indicator='=>', default_index=0)
 
 match option:
     case 'Google Chrome':
-        subprocess.call(['sh', './chrome.sh'])
+        subprocess.call(['sh', './scripts/ubuntu/browsers/chrome.sh'])
     case 'Microsoft Edge':
         pass
     case 'Brave':
