@@ -1,15 +1,17 @@
 #!/usr/bin/python
 
+import os
+import subprocess
 from pick import pick
 
-title = 'Choose an option: '
+title = 'Choose your distribution: '
 options = ['Ubuntu', 'Ubuntu based distribution', 'Debian', 'Debian based distribution', 'Fedora', 'Arch linux', 'Exit']
 
 option, index = pick(options, title, indicator='=>', default_index=0)
 
 match option:
     case "Ubuntu":
-         print ("Ubuntu")
+         subprocess.call('sh', './scripts/ubuntu/ubuntu.sh')
     case "Ubuntu based distribution":
           print ("opcion 2")
     case "Debian":
