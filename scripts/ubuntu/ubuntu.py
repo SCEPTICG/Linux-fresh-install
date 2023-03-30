@@ -1,4 +1,4 @@
 import os
 from pick import pick
 
-print ('Este es el script de ubuntu')
+os.system('sudo apt update && sudo apt upgrade -y')
