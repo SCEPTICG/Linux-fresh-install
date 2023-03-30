@@ -41,7 +41,7 @@ match option:
     case 'Install .deb Firefox':
         os.system('sudo snap remove firefox')
         os.system('sudo add-apt-repository ppa:mozillateam/ppa')
-        os.system('echo "Package: * Pin: release o=LP-PPA-mozillateam Pin-Priority: 1001 " | sudo tee /etc/apt/preferences.d/mozilla-firefox')
+        os.system('echo "\nPackage: *\nPin: release o=LP-PPA-mozillateam\nPin-Priority: 1001\n" | sudo tee /etc/apt/preferences.d/mozilla-firefox')
         os.system('echo "Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";" | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox')
         os.system('sudo apt install firefox -y')
     case 'Don\'t install a browser':
