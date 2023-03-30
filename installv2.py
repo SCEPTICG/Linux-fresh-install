@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import os
-import subprocess
 from pick import pick
 
 title = 'Choose your distribution: '
@@ -11,7 +10,8 @@ option, index = pick(options, title, indicator='=>', default_index=0)
 
 match option:
     case "Ubuntu":
-         subprocess.call(['python', './scripts/ubuntu/ubuntu.py'])
+         os.system('python3 /scripts/ubuntu/ubuntu.py')
+         
     case "Ubuntu based distribution":
           print ("opcion 2")
     case "Debian":
