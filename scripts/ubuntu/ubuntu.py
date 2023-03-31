@@ -28,5 +28,5 @@ match option:
         os.system('sudo apt install nala')
     case 'No':
         pass
-    
-    
+ 
+os.system('python3 ./scripts/ubuntu/code_editors(code_editors.py)')
