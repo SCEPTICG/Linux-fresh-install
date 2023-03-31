@@ -15,10 +15,10 @@ match option:
     case 'Brave':
         subprocess.call(['sh', './scripts/ubuntu/browsers/brave.sh'])
     case 'Opera':
-        pass
+        subprocess.call(['sh', './scripts/ubuntu/browsers/opera.sh'])
     case 'Vivaldi':
-        pass
+        subprocess.call(['sh', './scripts/ubuntu/browsers/vivaldi.sh'])
     case 'Install .deb Firefox':
-        pass
+         subprocess.call(['sh', './scripts/ubuntu/browsers/firefoxdeb.sh'])
     case 'Don\'t install a browser':
         pass
