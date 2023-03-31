@@ -11,7 +11,7 @@ match option:
     case 'VS Code':
         subprocess.call(['sh', './scripts/ubuntu/code_editors/vscode.sh'])
     case 'Sublime Text 4':
-        subprocess.call(['sh', './scripts/ubuntu/'])
+        subprocess.call(['sh', './scripts/ubuntu/code_editors/sublimetext4.sh'])
     case 'Pycharm':
         subprocess.call(['sh', './scripts/ubuntu/'])
     case 'Vim':
