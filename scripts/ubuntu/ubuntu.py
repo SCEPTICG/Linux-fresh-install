@@ -17,4 +17,14 @@ match option:
         pass
 
 os.system('python3 ./scripts/ubuntu/browsers/browsers.py')
-print ('Has salido de instalar un naegador')
+
+title = 'Do you want to install Nala (a better frontend APT)? '
+options = ['Yes', 'No']
+
+option, index = pick(options, title, indicator='=>', default_index=0)
+
+match option:
+    case 'Yes':
+        os.system('sudo apt install nala')
+    case 'No':
+        pass
