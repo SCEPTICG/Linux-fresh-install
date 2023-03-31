@@ -21,4 +21,4 @@ match option:
     case 'Install .deb Firefox':
         pass
     case 'Don\'t install a browser':
-        exit
+        pass

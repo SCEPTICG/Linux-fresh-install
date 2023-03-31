@@ -17,3 +17,4 @@ match option:
         pass
 
 os.system('python3 ./scripts/ubuntu/browsers/browsers.py')
+print ('Has salido de instalar un naegador')
