@@ -13,7 +13,7 @@ match option:
     case 'Microsoft Edge':
         subprocess.call(['sh', './scripts/ubuntu/browsers/edge.sh'])
     case 'Brave':
-        pass
+        subprocess.call(['sh', './scripts/ubuntu/browsers/brave.sh'])
     case 'Opera':
         pass
     case 'Vivaldi':
