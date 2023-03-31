@@ -11,7 +11,7 @@ match option:
     case 'Google Chrome':
         subprocess.call(['sh', './scripts/ubuntu/browsers/chrome.sh'])
     case 'Microsoft Edge':
-        pass
+        subprocess.call(['sh', './scripts/ubuntu/browsers/edge.sh'])
     case 'Brave':
         pass
     case 'Opera':
