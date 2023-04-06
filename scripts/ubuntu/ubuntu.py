@@ -29,4 +29,6 @@ match option:
     case 'No':
         pass
  
-os.system('python3 ./scripts/ubuntu/code_editors(code_editors.py)')
+os.system('python3 ./scripts/ubuntu/shells/shells.py')
+ 
+os.system('python3 ./scripts/ubuntu/code_editors/code_editors.py')
