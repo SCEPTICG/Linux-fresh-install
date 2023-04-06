@@ -6,7 +6,7 @@ This script is used to make a whole series of configurations to leave the OS the
 [Information](#Information)</br>
 
 ### Information
-['General things'](#General)</br>
+[General things](#General things)</br>
 
 ### General things
 with this scripts you can install:
