@@ -27,7 +27,7 @@ option, index = pick(options, title, indicator='=>', default_index=0)
 
 match option:
     case 'Yes':
-        os.system('sudo apt install nala')
+        os.system('sudo apt install nala -y')
     case 'No':
         pass
  
