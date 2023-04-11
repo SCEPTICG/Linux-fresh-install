@@ -13,4 +13,4 @@ match option:
     case 'Fish':
         pass
     case 'Bash (default)':
-        os.system('python3 ./scripts/ubuntu/shells/bash.py')
+        os.system(['python3 ./scripts/ubuntu/shells/bash.py'])
