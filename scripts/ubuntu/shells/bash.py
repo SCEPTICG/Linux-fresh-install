@@ -3,7 +3,7 @@ import subprocess
 
 os.system('sudo apt install git curl -y')
 os.system('git clone https://github.com/ryanoasis/nerd-fonts.git')
-os.system('cd nerd-fonts')
+os.system('cd nerd-fonts/')
 os.system('./install.sh')
 os.system('cd ..')
 os.system('rm -rf nerd-fonts')
