@@ -128,6 +128,10 @@ source "$OSH"/oh-my-bash.sh
 # users are encouraged to define aliases within the OSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
+
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
+
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
