@@ -1,5 +1,4 @@
 import os
-import subprocess
 
 os.system('sudo apt install git curl -y')
 os.system('git clone https://github.com/ryanoasis/nerd-fonts.git')
