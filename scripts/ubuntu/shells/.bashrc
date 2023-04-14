@@ -138,3 +138,4 @@ bind 'TAB:menu-complete'
 alias nala="apt"
 alias sudo="sudo "
 alias cat="batcat"
+alias ls="lsd"
