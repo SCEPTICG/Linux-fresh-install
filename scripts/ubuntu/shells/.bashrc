@@ -137,3 +137,4 @@ bind 'TAB:menu-complete'
 # alias ohmybash="mate ~/.oh-my-bash"
 alias nala="apt"
 alias sudo="sudo "
+alias cat="batcat"
