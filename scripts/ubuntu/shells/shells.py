@@ -9,7 +9,7 @@ option, index = pick(options, title, indicator='=>', default_index=0)
 
 match option:
     case 'Zsh':
-        pass
+         os.system('python3 ./scripts/ubuntu/shells/zsh.py')
     case 'Fish':
         pass
     case 'Bash':
