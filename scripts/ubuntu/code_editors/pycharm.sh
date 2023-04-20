@@ -1,4 +1,4 @@
-#!/bib/bash
+#!/bin/bash
 
 sudo apt install python3-pip -y
 wget https://download-cdn.jetbrains.com/python/pycharm-community-2022.1.tar.gz
