@@ -105,7 +105,7 @@ cp config/zshrc ~/.zshrc
 sudo apt install zsh-syntax-highlighting zsh-autosuggestions locate bat -y
 sudo updatedb
 sudo mkdir /usr/share/zsh-sudo
-sudo chown scepticg:scepticg /usr/share/zsh-sudo
+sudo chown $USER:$USER /usr/share/zsh-sudo
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
 sudo mv sudo.plugin.zsh /usr/share/zsh-sudo
 wget https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd-musl_0.23.1_amd64.deb
