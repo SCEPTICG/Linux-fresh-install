@@ -1,5 +1,11 @@
 import os
 
+os.system('wget https://github.com/ryanoasis/nerd-fonts/releases/tag/v2.3.3/Hack.zip')
+os.system('wget https://github.com/ryanoasis/nerd-fonts/releases/tag/v2.3.3/NerdFontsSymbolsOnly.zip')
+os.system('unzip *.zip')
+os.system('rm -rf *.zip')
+os.system('sudo mv *.ttf /usr/local/share/fonts')
+os.system('fc-cache -f -v')
 os.system('sudo apt install zsh -y')
 os.system('chsh -s $(which zsh)')
 os.system('cp scripts/ubuntu/shells/zshrc ~/.zshrc')
