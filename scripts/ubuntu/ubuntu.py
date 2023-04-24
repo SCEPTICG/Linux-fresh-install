@@ -20,16 +20,7 @@ match option:
 
 os.system('python3 ./scripts/ubuntu/browsers/browsers.py')
 
-title = 'Do you want to install Nala (a better frontend APT)? '
-options = ['Yes', 'No']
-
-option, index = pick(options, title, indicator='=>', default_index=0)
-
-match option:
-    case 'Yes':
-        os.system('sudo apt install nala -y')
-    case 'No':
-        pass
+os.system('sudo apt install nala -y')
  
 os.system('python3 ./scripts/ubuntu/shells/shells.py')
  
