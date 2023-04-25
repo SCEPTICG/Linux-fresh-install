@@ -3,14 +3,14 @@ import subprocess
 from pick import pick
 
 title = 'which shell do you want to use? '
-options = ['Zsh','Fish', 'Bash']
+options = ['Bash','Zsh','Fish',]
 
 option, index = pick(options, title, indicator='=>', default_index=0)
 
 match option:
-    case 'Zsh':
-         os.system('python3 ./scripts/ubuntu/shells/zsh.py')
-    case 'Fish':
-        pass
     case 'Bash':
         os.system('python3 ./scripts/ubuntu/shells/bash.py')
+    case 'Zsh':
+        os.system('python3 ./scripts/ubuntu/shells/zsh.py')
+    case 'Fish':
+        pass
