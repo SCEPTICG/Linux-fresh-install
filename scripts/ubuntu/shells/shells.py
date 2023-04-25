@@ -13,4 +13,4 @@ match option:
     case 'Zsh':
         os.system('python3 ./scripts/ubuntu/shells/zsh.py')
     case 'Fish':
-        pass
+        os.system('python3 ./scripts/ubuntu/shells/fish.py')
